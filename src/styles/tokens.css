@@ -1,0 +1,30 @@
+/* Design tokens: Academia / Classical, "library at night".
+   Everything visual is driven from here. Change a value once and it flows through. */
+:root {
+  /* Foundation */
+  --bg: #1C1714;            /* Deep Mahogany */
+  --bg-alt: #251E19;        /* Aged Oak: cards and panels */
+  --fg: #E8DFD4;            /* Antique Parchment: primary text */
+  --muted: #3D332B;         /* Worn Leather */
+  --muted-fg: #9C8B7A;      /* Faded Ink: secondary text */
+  --border: #4A3F35;        /* Wood Grain */
+
+  /* Accents */
+  --accent: #C9A962;        /* Polished Brass: all interactive elements */
+  --accent-light: #D4B872;
+  --accent-dark: #B8953F;
+  --accent-fg: #1C1714;     /* Text on brass */
+  --crimson: #0C6E93;       /* Secondary accent (name kept from the design system; the value is cerulean) */
+
+  /* Typography */
+  --font-head: 'Newsreader', serif;
+  --font-sub: 'Alegreya Sans', sans-serif;
+  --font-body: 'Scope One', serif;
+  --body-min: 16px;
+  --body-leading: 26px;
+
+  /* Motion */
+  --dur-base: 300ms;
+  --dur-slow: 500ms;
+  --dur-dramatic: 700ms;
+}

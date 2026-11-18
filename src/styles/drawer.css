@@ -1,0 +1,115 @@
+/* ---------- backdrop ---------- */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 9, 7, 0.6);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease-out;
+}
+
+.drawer-backdrop.open { opacity: 1; pointer-events: auto; }
+
+/* ---------- panel ---------- */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(440px, 100%);
+  background: var(--bg-alt);
+  border-left: 1px solid var(--border);
+  z-index: 1001;
+  transform: translateX(100%);
+  /* visibility removes the closed panel from the tab order once it has slid away */
+  visibility: hidden;
+  transition: transform var(--dur-slow) ease-out, visibility 0s linear var(--dur-slow);
+  overflow-y: auto;
+  box-shadow: -12px 0 32px rgba(0, 0, 0, 0.4);
+}
+
+.drawer.open {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform var(--dur-slow) ease-out, visibility 0s;
+}
+
+.drawer-inner { padding: 40px 36px 48px; position: relative; }
+
+.drawer-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--dur-base) ease-out, color var(--dur-base) ease-out;
+}
+
+.drawer-close:hover { border-color: var(--accent); }
+.drawer-close svg { width: 16px; height: 16px; }
+
+.drawer h2 {
+  font-size: 32px;
+  margin: 6px 0 10px;
+  padding-right: 40px;
+}
+
+.drawer-sub { color: var(--fg); font-size: var(--body-min); margin: 0 0 32px; }
+
+.drawer .ornate-divider { margin: 0 0 32px; max-width: 100%; }
+
+/* ---------- form ---------- */
+.field { margin-bottom: 22px; }
+
+.field label {
+  display: block;
+  font-family: var(--font-sub);
+  font-style: italic;
+  font-weight: 700;
+  font-size: var(--body-min);
+  letter-spacing: 0.01em;
+  color: var(--muted-fg);
+  margin-bottom: 10px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--body-min);
+  border-radius: 0;
+  padding: 0 16px;
+  height: 48px;
+}
+
+.field textarea { height: 120px; padding: 12px 16px; resize: vertical; }
+
+.field input::placeholder,
+.field textarea::placeholder { color: var(--muted-fg); font-style: italic; }
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 169, 98, 0.2);
+}
+
+.drawer .btn-primary { width: 100%; margin-top: 6px; }
+
+/* ---------- success state ---------- */
+.drawer-success { text-align: center; padding: 40px 0; }
+.drawer-success .card-icon { margin: 0 auto 22px; }
+.drawer-success h3 { font-size: 26px; margin-bottom: 12px; }
+.drawer-success p { color: var(--fg); }

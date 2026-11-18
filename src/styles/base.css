@@ -1,0 +1,152 @@
+/* ---------- reset & document ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+/* Keep anchored sections clear of the sticky header */
+[id] { scroll-margin-top: 88px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--body-min);
+  line-height: var(--body-leading);
+  position: relative;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--fg);
+}
+
+/* ---------- layout helpers ---------- */
+.wrap { max-width: 1152px; margin: 0 auto; padding: 0 24px; }
+.wrap-narrow { max-width: 896px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- atmospheric overlays (fixed, single elements) ---------- */
+.texture-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+}
+
+.vignette-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 998;
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 55%, rgba(28, 23, 20, 0.45) 100%);
+}
+
+/* ---------- eyebrow / overline ---------- */
+.overline {
+  font-family: var(--font-sub);
+  font-style: italic;
+  font-weight: 400;
+  font-size: calc(13px + 1pt);
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+/* ---------- ornate divider ---------- */
+.ornate-divider {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  max-width: 280px;
+  margin: 32px auto;
+  background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--accent) 50%, var(--border) 80%, transparent 100%);
+}
+
+.ornate-divider::before {
+  content: "❦";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--accent);
+  font-size: 13px;
+  background: var(--bg);
+  padding: 0 14px;
+}
+
+.ornate-divider.on-alt::before { background: var(--bg-alt); }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sub);
+  font-style: italic;
+  font-weight: 700;
+  font-size: calc(16px + 2pt);
+  letter-spacing: 0.01em;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all var(--dur-base) ease-out;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--accent-light) 0%, var(--accent) 50%, var(--accent-dark) 100%);
+  color: var(--accent-fg);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 4px 12px rgba(201, 169, 98, 0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: var(--fg);
+}
+
+/* ---------- focus (never removed) ---------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.btn:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+}
+
+/* ---------- motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

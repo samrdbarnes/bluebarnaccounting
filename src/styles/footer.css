@@ -19,7 +19,7 @@
   font-size: var(--body-min);
   line-height: var(--body-leading);
   letter-spacing: 0.01em;
-  color: var(--accent);
+  color: var(--heading);
   margin-bottom: 18px;
 }
 
@@ -27,16 +27,16 @@
 
 .site-footer ul a,
 .site-footer address a {
-  color: var(--muted-fg);
+  color: var(--fg);
   font-size: var(--body-min);
   transition: color var(--dur-base) ease-out;
 }
 
 .site-footer ul a:hover,
-.site-footer address a:hover { color: var(--accent); }
+.site-footer address a:hover { color: var(--action); text-decoration: underline; text-underline-offset: 4px; }
 
 .site-footer p {
-  color: var(--muted-fg);
+  color: var(--fg);
   font-size: var(--body-min);
   margin: 0 0 8px;
 }
@@ -54,10 +54,10 @@
   flex-wrap: wrap;
   gap: 12px 28px;
   justify-content: space-between;
-  color: var(--muted-fg);
+  color: var(--fg);
   font-size: var(--body-min);
 }
 
 .footer-bottom a { transition: color var(--dur-base) ease-out; }
-.footer-bottom a:hover { color: var(--accent); }
+.footer-bottom a:hover { color: var(--action); text-decoration: underline; text-underline-offset: 4px; }
 .footer-legal [aria-hidden="true"] { margin: 0 10px; }

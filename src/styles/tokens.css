@@ -1,20 +1,29 @@
-/* Design tokens: Academia / Classical, "library at night".
+/* Design tokens: Blue Barn Accounting brand palette and type.
    Everything visual is driven from here. Change a value once and it flows through. */
 :root {
-  /* Foundation */
-  --bg: #1C1714;            /* Deep Mahogany */
-  --bg-alt: #251E19;        /* Aged Oak: cards and panels */
-  --fg: #E8DFD4;            /* Antique Parchment: primary text */
-  --muted: #3D332B;         /* Worn Leather */
-  --muted-fg: #9C8B7A;      /* Faded Ink: secondary text */
-  --border: #4A3F35;        /* Wood Grain */
+  /* Brand palette */
+  --slate: #2F4858;         /* Slate Blue: headings, primary buttons, icons */
+  --sky: #06A4BD;           /* Sky: fills and decoration only, never small text (2:1 on Cream) */
+  --earth: #412722;         /* Earth: body text */
+  --copper: #DFA16F;        /* Copper: rules, corner marks, borders. Decoration only (1.5:1 on Cream) */
+  --cream: #F0D5BC;         /* Cream: page background */
+  --ivory: #FAF4EE;         /* Ivory: cards, panels, drawer */
 
-  /* Accents */
-  --accent: #C9A962;        /* Polished Brass: all interactive elements */
-  --accent-light: #D4B872;
-  --accent-dark: #B8953F;
-  --accent-fg: #1C1714;     /* Text on brass */
-  --crimson: #0C6E93;       /* Secondary accent (name kept from the design system; the value is cerulean) */
+  /* Semantic roles */
+  --bg: var(--cream);
+  --bg-alt: var(--ivory);
+  --fg: var(--earth);               /* 9.7:1 on Cream */
+  --heading: var(--slate);          /* 6.8:1 on Cream, 8.5:1 on Ivory */
+  --muted: #E6C6A8;                 /* a step darker than Cream, for placeholder panels */
+  --muted-fg: var(--slate);         /* secondary text */
+  --border: rgba(65, 39, 34, 0.28); /* Earth at low opacity */
+  --band: rgba(250, 244, 238, 0.55); /* Ivory wash behind alternate sections */
+
+  --accent: var(--copper);          /* decoration */
+  --accent-text: var(--slate);      /* anything readable that needs emphasis */
+  --action: var(--slate);           /* primary button, focus ring, interactive icons */
+  --action-hover: var(--earth);
+  --action-fg: var(--ivory);        /* text on Slate or Earth */
 
   /* Typography */
   --font-head: 'Newsreader', serif;

@@ -98,7 +98,7 @@ export default function ContactDrawer({ onSubmit }) {
           {submitted ? (
             <div className="drawer-success" role="status">
               <div className="card-icon">
-                <Icon name="check" />
+                <Icon name="check_circle" filled />
               </div>
               <h3>Message received</h3>
               <p>Thank you for reaching out. A member of our team will be in touch within one business day.</p>

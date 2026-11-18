@@ -8,7 +8,7 @@ function ServiceCard({ numeral, icon, title, body, featured }) {
     <article className={`card${featured ? ' featured' : ''}`}>
       {featured && (
         <div className="wax-seal" aria-hidden="true">
-          <Icon name="star" />
+          <Icon name="verified_user" filled />
         </div>
       )}
       <span className="roman" aria-hidden="true">

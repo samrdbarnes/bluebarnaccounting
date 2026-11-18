@@ -16,28 +16,28 @@ export const navLinks = [
 
 export const services = [
   {
-    icon: 'building',
+    icon: 'business_center',
     title: 'Fractional CFO Support',
     body: 'Executive-level financial strategy and leadership, delivered part-time and priced for a growing business rather than a full C-suite.',
     featured: true,
   },
   {
-    icon: 'wave',
+    icon: 'payments',
     title: 'Cash Flow Management',
     body: 'We project liquidity months in advance, so seasonal dips and slow-paying clients never catch you without a cushion.',
   },
   {
-    icon: 'bars',
+    icon: 'trending_up',
     title: 'Budgeting & Forecasting',
     body: 'Realistic, scenario-tested financial targets that give you room to plan for growth, and warning before things go sideways.',
   },
   {
-    icon: 'clock',
+    icon: 'bar_chart',
     title: 'KPI Tracking & Dashboards',
     body: 'Clear, ongoing visibility into the handful of metrics that actually move your business, presented in plain language.',
   },
   {
-    icon: 'chart',
+    icon: 'support_agent',
     title: 'Business Consulting',
     body: 'Grounded guidance on pricing, new locations, restructuring, or any decision where the financial stakes are high.',
   },
@@ -45,17 +45,17 @@ export const services = [
 
 export const industries = [
   {
-    icon: 'house',
+    icon: 'home_work',
     title: 'Real Estate Investors',
     body: 'Portfolio-level reporting that tracks performance property by property.',
   },
   {
-    icon: 'spa',
+    icon: 'pie_chart',
     title: 'Med Spas',
     body: 'Service-line profitability that shows which treatments actually drive margin.',
   },
   {
-    icon: 'cube',
+    icon: 'savings',
     title: 'Nonprofits',
     body: 'Fund accounting that keeps restricted and unrestricted dollars clearly separated.',
   },

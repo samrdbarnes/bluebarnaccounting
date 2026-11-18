@@ -18,7 +18,7 @@ export default function Industries() {
             <article className="industry-card" key={industry.title}>
               <div className="arch-frame" aria-hidden="true">
                 <div className="arch-fill">
-                  <Icon name={industry.icon} strokeWidth={1} />
+                  <Icon name={industry.icon} />
                 </div>
               </div>
               <h3>{industry.title}</h3>

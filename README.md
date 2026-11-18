@@ -1,6 +1,6 @@
 # Blue Barn Accounting
 
-Marketing site for a fractional CFO and accounting practice, built with React and Vite in the Academia / Classical design system.
+Marketing site for a fractional CFO and accounting practice, built with React and Vite with the Blue Barn Accounting brand (palette, type, Material Symbols icons, logo).
 
 ## Run it
 
@@ -32,8 +32,12 @@ src/
 - **Contact details**: edit `site` in `src/data/content.js` (the address is still a placeholder).
 - **Contact form**: `ContactDrawer` accepts an `onSubmit(data)` prop, passed in `App.jsx`. Right now submitting only shows the thank-you message. Point it at your form service or API.
 - **Footer and legal links** currently point to `#`.
-- **Industry panels**: the gradient blocks with icons are stand-ins. Put a photograph in `.arch-frame` and the sepia-to-colour hover effect applies to it.
+- **Industry panels**: the gradient blocks with icons are stand-ins. Put a photograph in `.arch-frame` and the muted-to-full-colour hover effect applies to it.
 
 ## Typography
 
 Headings are Newsreader Medium, body copy is Scope One at 16/26, and eyebrows, navigation, buttons and labels are Alegreya Sans italic. Fonts load from Google Fonts in `index.html`.
+
+## Brand
+
+Colours are tokens in `tokens.css` (Slate, Sky, Earth, Copper, Cream, Ivory). Copper and Sky are decoration only; they fail contrast as small text. Icons are Material Symbols, outlined by default (`filled` prop for emphasis), in `components/iconPaths.js`. The logo is `src/assets/blue-barn-logo.svg`; the favicon is the barn mark in `public/favicon.svg`. No text is uppercase and no corners are rounded, by design.

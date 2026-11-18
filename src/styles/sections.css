@@ -10,7 +10,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201, 169, 98, 0.08), transparent 70%);
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(223, 161, 111, 0.22), transparent 70%);
   pointer-events: none;
 }
 
@@ -40,7 +40,7 @@
   margin: 18px 0 22px;
 }
 
-.hero h1 em { color: var(--accent); font-style: italic; }
+.hero h1 em { color: var(--earth); font-style: italic; }
 
 .hero .lede {
   font-size: var(--body-min);
@@ -59,7 +59,7 @@
 /* ---------- proclamation ---------- */
 .proclamation {
   padding: 96px 24px;
-  background: rgba(37, 30, 25, 0.5);
+  background: var(--band);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -81,8 +81,7 @@
   line-height: 0.8;
   float: left;
   margin: 6px 12px 0 0;
-  color: var(--accent);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--heading);
 }
 
 /* ---------- services ---------- */
@@ -106,7 +105,7 @@ section.services { padding: 112px 24px; }
   transition: border-color var(--dur-base) ease-out, box-shadow var(--dur-base) ease-out;
 }
 
-.card:hover { border-color: rgba(201, 169, 98, 0.5); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); }
+.card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(65, 39, 34, 0.15); }
 
 .card::before,
 .card::after {
@@ -114,8 +113,8 @@ section.services { padding: 112px 24px; }
   position: absolute;
   width: 22px;
   height: 22px;
-  border: 1.5px solid var(--accent);
-  opacity: 0.55;
+  border: 2px solid var(--accent);
+  opacity: 0.7;
   transition: opacity var(--dur-base) ease-out;
 }
 
@@ -132,8 +131,8 @@ section.services { padding: 112px 24px; }
   width: 52px;
   height: 52px;
   border-radius: 0;
-  background: radial-gradient(circle at 35% 30%, #2E8FB5, var(--crimson) 60%, #063B4F 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 2px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(0, 0, 0, 0.35);
+  background: radial-gradient(circle at 35% 30%, var(--sky), var(--slate) 75%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(65, 39, 34, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,13 +147,13 @@ section.services { padding: 112px 24px; }
   pointer-events: none;
 }
 
-.wax-seal svg { width: 20px; height: 20px; stroke: var(--fg); }
+.wax-seal svg { width: 26px; height: 26px; fill: var(--ivory); }
 
 .card-icon {
   width: 48px;
   height: 48px;
   border-radius: 0;
-  border: 1px solid rgba(201, 169, 98, 0.3);
+  border: 1px solid var(--accent);
   background: var(--bg);
   display: flex;
   align-items: center;
@@ -162,14 +161,14 @@ section.services { padding: 112px 24px; }
   margin-bottom: 22px;
 }
 
-.card-icon svg { width: 20px; height: 20px; stroke: var(--accent); stroke-width: 1.5; }
+.card-icon svg { width: 28px; height: 28px; fill: var(--action); }
 
 .card .roman {
   font-family: var(--font-sub);
   font-style: italic;
   font-size: var(--body-min);
   letter-spacing: 0.25em;
-  color: var(--muted-fg);
+  color: var(--heading);
   display: block;
   margin-bottom: 10px;
 }
@@ -180,7 +179,7 @@ section.services { padding: 112px 24px; }
 /* ---------- industries ---------- */
 section.industries {
   padding: 112px 24px;
-  background: rgba(37, 30, 25, 0.5);
+  background: var(--band);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -191,7 +190,7 @@ section.industries {
 
 .industry-card { text-align: center; }
 
-/* Sepia-to-colour reveal. Swap the gradient for a real photograph and the effect carries over. */
+/* Muted-to-full-colour reveal. Swap the gradient for a real photograph and the effect carries over. */
 .arch-frame {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -200,12 +199,12 @@ section.industries {
   margin: 0 auto 24px;
   border: 1px solid var(--border);
   position: relative;
-  background: linear-gradient(160deg, var(--muted), var(--bg-alt));
-  filter: sepia(0.6) contrast(0.95) brightness(0.9);
+  background: linear-gradient(160deg, var(--muted), var(--ivory));
+  filter: saturate(0.6) contrast(0.95);
   transition: filter var(--dur-dramatic) ease-out, transform var(--dur-dramatic) ease-out;
 }
 
-.industry-card:hover .arch-frame { filter: sepia(0) contrast(1) brightness(1); }
+.industry-card:hover .arch-frame { filter: saturate(1) contrast(1); }
 
 .arch-frame .arch-fill {
   position: absolute;
@@ -215,7 +214,7 @@ section.industries {
   justify-content: center;
 }
 
-.arch-frame svg { width: 30%; height: 30%; stroke: var(--accent); stroke-width: 1; }
+.arch-frame svg { width: 34%; height: 34%; fill: var(--action); }
 
 .industry-card h3 { font-size: 24px; margin-bottom: 10px; }
 .industry-card p { color: var(--fg); font-size: var(--body-min); }
@@ -233,7 +232,7 @@ section.faq { padding: 112px 24px; }
   width: 100%;
   background: none;
   border: none;
-  color: var(--fg);
+  color: var(--heading);
   text-align: left;
   padding: 26px 0;
   display: flex;
@@ -247,15 +246,15 @@ section.faq { padding: 112px 24px; }
 }
 
 .faq-q svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--accent);
+  width: 28px;
+  height: 28px;
+  fill: var(--action);
   flex-shrink: 0;
   margin-left: 16px;
-  transition: transform var(--dur-base) ease-out, stroke var(--dur-base) ease-out;
+  transition: transform var(--dur-base) ease-out;
 }
 
-.faq-item.open .faq-q svg { transform: rotate(180deg); stroke: var(--accent-light); }
+.faq-item.open .faq-q svg { transform: rotate(180deg); }
 
 /* Height animates from 0fr to 1fr, so answers can be any length */
 .faq-a {
@@ -285,7 +284,7 @@ section.faq { padding: 112px 24px; }
 section.cta {
   padding: 112px 24px;
   text-align: center;
-  background: rgba(37, 30, 25, 0.5);
+  background: var(--band);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }

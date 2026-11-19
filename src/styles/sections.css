@@ -16,10 +16,13 @@
 
 .hero-frame {
   position: relative;
-  max-width: 860px;
+  max-width: 1104px; /* same content width as the .wrap sections below (1152px less 24px gutters) */
   margin: 0 auto;
-  padding: 56px 32px;
+  padding: 56px 0;
 }
+
+/* Below the max width the sections stack their gutters (section + wrap), so match that */
+@media (max-width: 1200px) { .hero-frame { padding-left: 24px; padding-right: 24px; } }
 
 .hero-frame::before,
 .hero-frame::after {

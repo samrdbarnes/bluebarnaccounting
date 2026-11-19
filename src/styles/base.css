@@ -64,27 +64,18 @@ h1, h2, h3, h4 {
 
 /* ---------- ornate divider ---------- */
 .ornate-divider {
-  position: relative;
-  height: 1px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
   width: 100%;
-  max-width: 280px;
-  margin: 32px auto;
-  background: linear-gradient(90deg, transparent 0%, var(--accent) 20%, var(--accent) 80%, transparent 100%);
-}
-
-.ornate-divider::before {
-  content: "❦";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--action);
+  margin: 32px 0;
+  color: var(--accent);
   font-size: 13px;
-  background: var(--bg);
-  padding: 0 14px;
+  line-height: 1;
 }
 
-.ornate-divider.on-alt::before { background: var(--bg-alt); }
+.ornate-divider::before { content: "❦"; }
+.ornate-divider::after { content: ""; flex: 1; height: 1px; background: var(--accent); opacity: 0.7; }
 
 /* ---------- buttons ---------- */
 .btn {

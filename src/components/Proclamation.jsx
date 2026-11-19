@@ -1,14 +1,16 @@
 import Overline from './Overline.jsx'
 import OrnateDivider from './OrnateDivider.jsx'
 
-/** The formal "manifesto" section: centred headline, ornate divider, drop-cap body. */
+/** Two-column manifesto: title and divider on the left (25%), copy with a drop cap on the right. */
 export default function Proclamation() {
   return (
     <section className="proclamation" aria-labelledby="proclamation-title">
-      <div className="wrap-narrow proclamation-inner">
-        <Overline>Our Philosophy</Overline>
-        <h2 id="proclamation-title">Financial insight, not guesswork</h2>
-        <OrnateDivider onAlt />
+      <div className="wrap proclamation-inner">
+        <div className="proclamation-head">
+          <Overline>Our Philosophy</Overline>
+          <h2 id="proclamation-title">Financial insight, not guesswork</h2>
+          <OrnateDivider />
+        </div>
         <div className="proclamation-body">
           <p>
             Too many owners steer their businesses by instinct alone, expanding, hiring, or investing without a clear

@@ -45,19 +45,19 @@ export const services = [
 
 export const industries = [
   {
-    icon: 'home_work',
-    title: 'Real Estate Investors',
-    body: 'Portfolio-level reporting that tracks performance property by property.',
+    icon: 'assignment',
+    title: 'Construction',
+    body: 'Job costing and work-in-progress reporting that show the margin on every project before it closes.',
   },
   {
-    icon: 'pie_chart',
-    title: 'Med Spas',
-    body: 'Service-line profitability that shows which treatments actually drive margin.',
+    icon: 'receipt_long',
+    title: 'Private Practices',
+    body: 'Revenue per provider, collections and overhead in one view, so growth decisions rest on real numbers.',
   },
   {
-    icon: 'savings',
-    title: 'Nonprofits',
-    body: 'Fund accounting that keeps restricted and unrestricted dollars clearly separated.',
+    icon: 'fact_check',
+    title: 'Space Development Projects and Grants',
+    body: 'Grant accounting and milestone-based budgets that keep public and private funding compliant and clearly tracked.',
   },
 ]
 

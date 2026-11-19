@@ -27,8 +27,8 @@ export default function Services() {
   return (
     <section className="services" id="services" aria-labelledby="services-title">
       <div className="wrap">
-        <SectionHead overline="Volume II · What We Offer" title="Advisory built for growing businesses" titleId="services-title">
-          Five disciplines, one continuous view of your company's financial health.
+        <SectionHead overline="Volume II · What We Offer" title="Financial support built around how you work" titleId="services-title">
+          Five services, one clear and continuous view of where your money stands.
         </SectionHead>
         <div className="services-grid">
           {services.map((service, index) => (

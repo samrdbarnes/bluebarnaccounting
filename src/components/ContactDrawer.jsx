@@ -88,10 +88,10 @@ export default function ContactDrawer({ onSubmit }) {
             <Icon name="close" />
           </button>
 
-          <Overline>Get Strategic</Overline>
+          <Overline>Get Started</Overline>
           <h2 id="drawer-title">Let's talk</h2>
           <p className="drawer-sub">
-            Tell us a little about your business, and we'll follow up within one business day.
+            Tell us a little about your business and what you need, and we'll follow up within one business day.
           </p>
           <OrnateDivider />
 

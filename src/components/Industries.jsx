@@ -7,11 +7,11 @@ export default function Industries() {
     <section className="industries" id="industries" aria-labelledby="industries-title">
       <div className="wrap">
         <SectionHead
-          overline="Volume III · Specialized Expertise"
-          title="Advisory shaped by your industry"
+          overline="Volume III · Who We Serve"
+          title="Accounting shaped by your industry"
           titleId="industries-title"
         >
-          Generic financial advice rarely fits a specific business. Ours is informed by the industries we know best.
+          Generic bookkeeping rarely fits a specific business. We focus on three markets so we can speak your language.
         </SectionHead>
         <div className="industries-grid">
           {industries.map((industry) => (

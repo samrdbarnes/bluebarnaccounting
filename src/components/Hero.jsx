@@ -8,15 +8,14 @@ export default function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-frame">
-        <Overline>Volume I · Financial Advisory</Overline>
+        <Overline>Volume I · Accounting &amp; Bookkeeping</Overline>
         <h1 id="hero-title">
-          Strategic counsel for businesses
-          <br />
-          <em>ready to grow with clarity.</em>
+          Peace of mind is the highest form of <em>wealth.</em>
         </h1>
         <p className="lede">
-          Tabulae Financial pairs disciplined bookkeeping with fractional CFO leadership — so every decision you
-          make is backed by numbers you can trust.
+          We are an accounting and bookkeeping service for residential and commercial contractors, private medical
+          practices, and astronautics teams. Financial reporting, asset tracking, insights, financial governance, and
+          advisory, so you can have peace of mind about all your dollars and cents.
         </p>
         <div className="hero-actions">
           <Button href="#contact" onClick={open}>

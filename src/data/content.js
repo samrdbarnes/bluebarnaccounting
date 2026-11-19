@@ -46,18 +46,18 @@ export const services = [
 export const industries = [
   {
     icon: 'assignment',
-    title: 'Construction',
-    body: 'Job costing and work-in-progress reporting that show the margin on every project before it closes.',
+    title: 'Construction & Farming',
+    body: 'Job costing, work-in-progress reporting, and asset tracking for contractors and farms, so you know the margin on every job and where every machine stands.',
   },
   {
     icon: 'receipt_long',
-    title: 'Private Practices',
-    body: 'Revenue per provider, collections and overhead in one view, so growth decisions rest on real numbers.',
+    title: 'Private Medical Practices',
+    body: 'Revenue per provider, collections, and overhead in one clear view, with the financial governance a practice needs to run steadily.',
   },
   {
     icon: 'fact_check',
-    title: 'Space Development Projects and Grants',
-    body: 'Grant accounting and milestone-based budgets that keep public and private funding compliant and clearly tracked.',
+    title: 'Space Engineering Grants',
+    body: 'Grant accounting, milestone budgets, and audit-ready reporting that keep NASA and other public funding compliant and clearly tracked.',
   },
 ]
 
@@ -73,17 +73,18 @@ export const faqs = [
       'A good forecast projects revenue, expenses, and cash position forward, so you can prepare for a slow season or a growth spurt before it arrives, not after.',
   },
   {
-    question: 'Which businesses get the most out of advisory services?',
+    question: 'Who do you work with?',
     answer:
-      'Any business weighing a real decision, opening a new location, hiring ahead of demand, taking on investment, benefits from having the numbers modeled out first.',
+      'Residential and commercial contractors, farms, private medical practices, and astronautics teams managing NASA engineering grants. If your work looks like theirs, we already speak your language.',
   },
 ]
 
 export const footerServices = [
-  { label: 'Accounting Services', href: '#' },
-  { label: 'Bookkeeping Services', href: '#' },
-  { label: 'Financial Advisory', href: '#services' },
-  { label: 'Payroll Services', href: '#' },
+  { label: 'Accounting & Bookkeeping', href: '#services' },
+  { label: 'Financial Reporting', href: '#services' },
+  { label: 'Asset Tracking', href: '#services' },
+  { label: 'Financial Governance', href: '#services' },
+  { label: 'Advisory', href: '#services' },
 ]
 
 export const legalLinks = [

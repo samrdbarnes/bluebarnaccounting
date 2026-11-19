@@ -8,7 +8,7 @@ export default function Banner() {
   return (
     <section className="banner" aria-labelledby="banner-title">
       <Overline>Volume V</Overline>
-      <h2 id="banner-title">Ready to achieve more?</h2>
+      <h2 id="banner-title">Ready for peace of mind?</h2>
       <Button variant="secondary" href="#contact" onClick={open}>
         Get In Touch Today
       </Button>

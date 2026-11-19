@@ -18,7 +18,7 @@ header.site-header {
 
 /* ---------- brand (logo lockup) ---------- */
 .brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 30px; width: auto; max-width: none; }
+.brand-logo { height: 44px; width: auto; max-width: none; }
 
 /* ---------- primary navigation ---------- */
 .primary-nav { display: none; }

@@ -9,6 +9,7 @@ npm install
 npm run dev      # local dev server
 npm run build    # production build into dist/
 npm run preview  # serve the production build
+npm run build:single  # one self-contained HTML file in dist-single/ (or pass a path after --)
 ```
 
 ## Structure
@@ -40,4 +41,4 @@ Headings are Newsreader Medium, body copy is Scope One at 16/26, and eyebrows, n
 
 ## Brand
 
-Colours are tokens in `tokens.css` (Slate, Sky, Earth, Copper, Cream, Ivory). Copper and Sky are decoration only; they fail contrast as small text. Icons are Material Symbols, outlined by default (`filled` prop for emphasis), in `components/iconPaths.js`. The logo is `src/assets/blue-barn-logo.svg`; the favicon is the barn mark in `public/favicon.svg`. No text is uppercase and no corners are rounded, by design.
+Colours are tokens in `tokens.css` (Slate, Sky, Earth, Copper, Cream, Ivory). The theme is dark blue: Cream body text, Ivory headings, Copper buttons and accents (Sky is decoration only). Icons are Material Symbols, outlined by default (`filled` prop for emphasis), in `components/iconPaths.js`. The logo is `src/assets/blue-barn-logo.svg`; the favicon is the barn mark in `public/favicon.svg`. No text is uppercase and no corners are rounded, by design.

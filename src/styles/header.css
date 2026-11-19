@@ -2,7 +2,7 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 244, 238, 0.94);
+  background: rgba(36, 58, 71, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
 }
@@ -41,7 +41,7 @@ header.site-header {
   transition: color var(--dur-base) ease-out;
 }
 
-.nav-links a:hover { color: var(--action); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.nav-links a:hover { color: var(--ivory); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 
 .nav-cta { display: none; }
 

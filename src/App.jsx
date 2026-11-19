@@ -7,7 +7,6 @@ import Services from './components/Services.jsx'
 import Industries from './components/Industries.jsx'
 import Faq from './components/Faq.jsx'
 import CtaSection from './components/CtaSection.jsx'
-import Banner from './components/Banner.jsx'
 import Footer from './components/Footer.jsx'
 import ContactDrawer from './components/ContactDrawer.jsx'
 
@@ -23,7 +22,6 @@ export default function App() {
         <Industries />
         <Faq />
         <CtaSection />
-        <Banner />
       </main>
       <Footer />
       {/* Wire up your form handler here, e.g. onSubmit={(data) => fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })} */}

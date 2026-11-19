@@ -315,6 +315,3 @@ section.cta {
 section.cta h2 { font-size: clamp(30px, 4vw, 42px); margin: 14px 0 30px; }
 section.cta p { color: var(--fg); font-size: var(--body-min); max-width: 520px; margin: 0 auto 34px; }
 
-/* ---------- closing banner ---------- */
-.banner { padding: 88px 24px; text-align: center; }
-.banner h2 { font-size: clamp(32px, 5vw, 48px); margin: 14px 0 30px; }

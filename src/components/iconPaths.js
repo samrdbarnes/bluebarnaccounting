@@ -1,4 +1,4 @@
-// Material Symbols (Outlined, weight 400), the Blue Barn Accounting icon set.
+// Material Symbols (Outlined, weight 400), the Tabulae Financial icon set.
 // 24px grid, viewBox "0 -960 960 960". Generated from the official Material Symbols SVGs (Apache-2.0).
 // `outlined` is the default; `filled` is for active states and emphasis.
 // `expand_more` is not one of the sheet's 40 icons; it comes from the same family and is used for the FAQ toggle.

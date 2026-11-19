@@ -14,7 +14,7 @@ export default function Proclamation() {
         <div className="proclamation-body">
           <p>
             Too many owners steer their businesses by instinct alone, expanding, hiring, or investing without a clear
-            view of what the numbers actually support. Blue Barn Accounting exists to close that gap. Our fractional
+            view of what the numbers actually support. Tabulae Financial exists to close that gap. Our fractional
             CFO services bring the same rigor and foresight you'd expect from a full-time finance executive, scaled to
             fit a growing company's budget and pace.
           </p>

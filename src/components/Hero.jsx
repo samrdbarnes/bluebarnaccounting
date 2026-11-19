@@ -15,7 +15,7 @@ export default function Hero() {
           <em>ready to grow with clarity.</em>
         </h1>
         <p className="lede">
-          Blue Barn Accounting pairs disciplined bookkeeping with fractional CFO leadership — so every decision you
+          Tabulae Financial pairs disciplined bookkeeping with fractional CFO leadership — so every decision you
           make is backed by numbers you can trust.
         </p>
         <div className="hero-actions">

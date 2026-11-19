@@ -1,8 +1,8 @@
 // All list-driven copy lives here so it can be edited without touching components.
 
 export const site = {
-  name: 'Blue Barn Accounting',
-  email: 'info@bluebarnaccounting.com',
+  name: 'Tabulae Financial',
+  email: 'info@tabulaefinancial.com',
   phone: '(555) 010-2040',
   address: '[Street Address], [City, State ZIP]',
 }

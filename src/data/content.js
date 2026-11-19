@@ -56,7 +56,7 @@ export const industries = [
   },
   {
     icon: 'fact_check',
-    title: 'Space Engineering Grants',
+    title: 'Space Engineering',
     body: 'Grant accounting, milestone budgets, and audit-ready reporting that keep NASA and other public funding compliant and clearly tracked.',
   },
 ]

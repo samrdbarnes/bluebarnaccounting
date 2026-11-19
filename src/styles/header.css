@@ -2,7 +2,7 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(28, 23, 20, 0.92);
+  background: rgba(36, 58, 71, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
 }
@@ -16,38 +16,9 @@ header.site-header {
   margin: 0 auto;
 }
 
-/* ---------- brand ---------- */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-sub);
-  font-style: italic;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.01em;
-  transition: transform var(--dur-base) ease-out;
-}
-
-.brand:hover { transform: scale(1.03); }
-
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  border: 1.5px solid var(--accent);
-  border-radius: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-  font-family: var(--font-sub);
-  font-style: italic;
-  font-weight: 700;
-  font-size: 15px;
-  transform: rotate(45deg);
-}
-
-.brand-mark span { transform: rotate(-45deg); }
+/* ---------- brand (logo lockup) ---------- */
+.brand { display: inline-flex; align-items: center; }
+.brand-logo { height: 30px; width: auto; max-width: none; }
 
 /* ---------- primary navigation ---------- */
 .primary-nav { display: none; }
@@ -66,11 +37,11 @@ header.site-header {
   font-style: italic;
   font-size: calc(var(--body-min) + 1pt);
   letter-spacing: 0.01em;
-  color: var(--muted-fg);
+  color: var(--fg);
   transition: color var(--dur-base) ease-out;
 }
 
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover { color: var(--ivory); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 
 .nav-cta { display: none; }
 
@@ -83,11 +54,11 @@ header.site-header {
   background: none;
   border: 1px solid var(--border);
   border-radius: 0;
-  color: var(--accent);
+  color: var(--action);
   cursor: pointer;
 }
 
-.nav-burger svg { width: 20px; height: 20px; }
+.nav-burger svg { width: 24px; height: 24px; }
 
 @media (min-width: 900px) {
   .primary-nav { display: block; }
@@ -115,7 +86,7 @@ header.site-header {
   border-bottom: 1px solid var(--border);
 }
 
-.mobile-menu li a:hover { color: var(--accent); }
+.mobile-menu li a:hover { color: var(--action); }
 
 .mobile-menu .btn { width: 100%; margin-top: 20px; }
 

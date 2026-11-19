@@ -1,20 +1,29 @@
-/* Design tokens: Academia / Classical, "library at night".
+/* Design tokens: Tabulae Financial brand palette and type.
    Everything visual is driven from here. Change a value once and it flows through. */
 :root {
-  /* Foundation */
-  --bg: #1C1714;            /* Deep Mahogany */
-  --bg-alt: #251E19;        /* Aged Oak: cards and panels */
-  --fg: #E8DFD4;            /* Antique Parchment: primary text */
-  --muted: #3D332B;         /* Worn Leather */
-  --muted-fg: #9C8B7A;      /* Faded Ink: secondary text */
-  --border: #4A3F35;        /* Wood Grain */
+  /* Brand palette */
+  --slate: #2F4858;         /* Slate Blue: page and card surfaces */
+  --sky: #06A4BD;           /* Sky: fills and decoration only, never small text (3.2:1 on Slate) */
+  --earth: #412722;         /* Earth: text on Copper buttons */
+  --copper: #DFA16F;        /* Copper: buttons, rules, icons, eyebrows */
+  --cream: #F0D5BC;         /* Cream: body text */
+  --ivory: #FAF4EE;         /* Ivory: headings */
 
-  /* Accents */
-  --accent: #C9A962;        /* Polished Brass: all interactive elements */
-  --accent-light: #D4B872;
-  --accent-dark: #B8953F;
-  --accent-fg: #1C1714;     /* Text on brass */
-  --crimson: #0C6E93;       /* Secondary accent (name kept from the design system; the value is cerulean) */
+  /* Semantic roles (dark blue theme) */
+  --bg: #243A47;                    /* deep Slate: page */
+  --bg-alt: var(--slate);           /* Slate: cards, drawer */
+  --fg: var(--cream);               /* body text: 8.4:1 on page, 6.8:1 on cards */
+  --heading: var(--ivory);          /* 10:1 on page */
+  --muted: #3A566A;                 /* placeholder panels */
+  --muted-fg: var(--cream);
+  --border: rgba(240, 213, 188, 0.28);
+  --band: rgba(47, 72, 88, 0.55);   /* lighter wash behind alternate sections */
+
+  --accent: var(--copper);          /* rules, corner marks, icons, eyebrows (5.3:1 on page) */
+  --accent-text: var(--copper);
+  --action: var(--copper);          /* buttons, focus ring, interactive icons */
+  --action-hover: #E8B88F;
+  --action-fg: var(--earth);        /* text on Copper: 6.2:1 */
 
   /* Typography */
   --font-head: 'Newsreader', serif;

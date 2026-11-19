@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   padding: 120px 24px 96px;
-  text-align: center;
+  text-align: left;
   overflow: hidden;
 }
 
@@ -10,16 +10,19 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201, 169, 98, 0.08), transparent 70%);
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(6, 164, 189, 0.2), transparent 70%);
   pointer-events: none;
 }
 
 .hero-frame {
   position: relative;
-  max-width: 860px;
+  max-width: 1104px; /* same content width as the .wrap sections below (1152px less 24px gutters) */
   margin: 0 auto;
-  padding: 56px 32px;
+  padding: 56px 0;
 }
+
+/* Below the max width the sections stack their gutters (section + wrap), so match that */
+@media (max-width: 1200px) { .hero-frame { padding-left: 24px; padding-right: 24px; } }
 
 .hero-frame::before,
 .hero-frame::after {
@@ -38,6 +41,7 @@
   line-height: 1.08;
   letter-spacing: -0.01em;
   margin: 18px 0 22px;
+  text-wrap: balance;
 }
 
 .hero h1 em { color: var(--accent); font-style: italic; }
@@ -45,11 +49,11 @@
 .hero .lede {
   font-size: var(--body-min);
   color: var(--fg);
-  max-width: 560px;
-  margin: 0 auto 36px;
+  max-width: 640px;
+  margin: 0 0 36px;
 }
 
-.hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; }
 
 /* ---------- shared section header ---------- */
 .section-head { text-align: center; max-width: 640px; margin: 0 auto 64px; }
@@ -59,20 +63,39 @@
 /* ---------- proclamation ---------- */
 .proclamation {
   padding: 96px 24px;
-  background: rgba(37, 30, 25, 0.5);
+  background: var(--band);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
-.proclamation-inner { text-align: center; }
+.proclamation-inner { display: grid; grid-template-columns: 1fr; gap: 8px; align-items: start; }
 
-.proclamation h2 {
-  font-size: clamp(32px, 4vw, 46px);
-  margin: 14px 0 32px;
+@media (min-width: 800px) {
+  .proclamation-inner { grid-template-columns: 1fr 3fr; gap: 56px; }
+  .proclamation-head { position: sticky; top: 112px; }
 }
 
-.proclamation-body { text-align: left; color: var(--fg); font-size: var(--body-min); }
+.proclamation h2 {
+  font-size: clamp(30px, 3vw, 40px);
+  margin: 14px 0 0;
+}
+
+.proclamation-body { color: var(--fg); font-size: var(--body-min); }
 .proclamation-body p { margin: 0 0 20px; }
+
+.proclamation-body .values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-sub);
+  font-style: italic;
+  font-weight: 500;
+  font-size: calc(22px + 1pt);
+  color: var(--accent-text);
+}
 
 .proclamation-body p:first-of-type::first-letter {
   font-family: var(--font-head);
@@ -82,7 +105,6 @@
   float: left;
   margin: 6px 12px 0 0;
   color: var(--accent);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* ---------- services ---------- */
@@ -106,7 +128,7 @@ section.services { padding: 112px 24px; }
   transition: border-color var(--dur-base) ease-out, box-shadow var(--dur-base) ease-out;
 }
 
-.card:hover { border-color: rgba(201, 169, 98, 0.5); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); }
+.card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); }
 
 .card::before,
 .card::after {
@@ -114,8 +136,8 @@ section.services { padding: 112px 24px; }
   position: absolute;
   width: 22px;
   height: 22px;
-  border: 1.5px solid var(--accent);
-  opacity: 0.55;
+  border: 2px solid var(--accent);
+  opacity: 0.7;
   transition: opacity var(--dur-base) ease-out;
 }
 
@@ -132,8 +154,8 @@ section.services { padding: 112px 24px; }
   width: 52px;
   height: 52px;
   border-radius: 0;
-  background: radial-gradient(circle at 35% 30%, #2E8FB5, var(--crimson) 60%, #063B4F 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 2px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(0, 0, 0, 0.35);
+  background: radial-gradient(circle at 35% 30%, #0AB4CE, #04687A 80%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 2px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,13 +170,13 @@ section.services { padding: 112px 24px; }
   pointer-events: none;
 }
 
-.wax-seal svg { width: 20px; height: 20px; stroke: var(--fg); }
+.wax-seal svg { width: 26px; height: 26px; fill: var(--ivory); }
 
 .card-icon {
   width: 48px;
   height: 48px;
   border-radius: 0;
-  border: 1px solid rgba(201, 169, 98, 0.3);
+  border: 1px solid var(--accent);
   background: var(--bg);
   display: flex;
   align-items: center;
@@ -162,14 +184,14 @@ section.services { padding: 112px 24px; }
   margin-bottom: 22px;
 }
 
-.card-icon svg { width: 20px; height: 20px; stroke: var(--accent); stroke-width: 1.5; }
+.card-icon svg { width: 28px; height: 28px; fill: var(--action); }
 
 .card .roman {
   font-family: var(--font-sub);
   font-style: italic;
   font-size: var(--body-min);
   letter-spacing: 0.25em;
-  color: var(--muted-fg);
+  color: var(--accent-text);
   display: block;
   margin-bottom: 10px;
 }
@@ -180,7 +202,7 @@ section.services { padding: 112px 24px; }
 /* ---------- industries ---------- */
 section.industries {
   padding: 112px 24px;
-  background: rgba(37, 30, 25, 0.5);
+  background: var(--band);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -191,7 +213,7 @@ section.industries {
 
 .industry-card { text-align: center; }
 
-/* Sepia-to-colour reveal. Swap the gradient for a real photograph and the effect carries over. */
+/* Muted-to-full-colour reveal. Swap the gradient for a real photograph and the effect carries over. */
 .arch-frame {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -201,11 +223,11 @@ section.industries {
   border: 1px solid var(--border);
   position: relative;
   background: linear-gradient(160deg, var(--muted), var(--bg-alt));
-  filter: sepia(0.6) contrast(0.95) brightness(0.9);
+  filter: saturate(0.6) contrast(0.95) brightness(0.9);
   transition: filter var(--dur-dramatic) ease-out, transform var(--dur-dramatic) ease-out;
 }
 
-.industry-card:hover .arch-frame { filter: sepia(0) contrast(1) brightness(1); }
+.industry-card:hover .arch-frame { filter: saturate(1) contrast(1) brightness(1); }
 
 .arch-frame .arch-fill {
   position: absolute;
@@ -215,7 +237,7 @@ section.industries {
   justify-content: center;
 }
 
-.arch-frame svg { width: 30%; height: 30%; stroke: var(--accent); stroke-width: 1; }
+.arch-frame svg { width: 34%; height: 34%; fill: var(--action); }
 
 .industry-card h3 { font-size: 24px; margin-bottom: 10px; }
 .industry-card p { color: var(--fg); font-size: var(--body-min); }
@@ -233,7 +255,7 @@ section.faq { padding: 112px 24px; }
   width: 100%;
   background: none;
   border: none;
-  color: var(--fg);
+  color: var(--heading);
   text-align: left;
   padding: 26px 0;
   display: flex;
@@ -247,15 +269,15 @@ section.faq { padding: 112px 24px; }
 }
 
 .faq-q svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--accent);
+  width: 28px;
+  height: 28px;
+  fill: var(--action);
   flex-shrink: 0;
   margin-left: 16px;
-  transition: transform var(--dur-base) ease-out, stroke var(--dur-base) ease-out;
+  transition: transform var(--dur-base) ease-out;
 }
 
-.faq-item.open .faq-q svg { transform: rotate(180deg); stroke: var(--accent-light); }
+.faq-item.open .faq-q svg { transform: rotate(180deg); }
 
 /* Height animates from 0fr to 1fr, so answers can be any length */
 .faq-a {
@@ -285,7 +307,7 @@ section.faq { padding: 112px 24px; }
 section.cta {
   padding: 112px 24px;
   text-align: center;
-  background: rgba(37, 30, 25, 0.5);
+  background: var(--band);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }

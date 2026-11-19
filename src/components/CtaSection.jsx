@@ -7,11 +7,11 @@ export default function CtaSection() {
 
   return (
     <section className="cta" id="contact" aria-labelledby="cta-title">
-      <Overline>Get Strategic</Overline>
-      <h2 id="cta-title">Let's talk about where your business is headed</h2>
+      <Overline>Get Started</Overline>
+      <h2 id="cta-title">Let's put your mind at ease</h2>
       <p>
-        Your business deserves more than a once-a-year glance at the books. Tell us where you're headed, and we'll show
-        you the financial path to get there.
+        Tell us about your business and we'll show you how accurate books, clear reports, and steady guidance bring
+        peace of mind.
       </p>
       <Button href="#contact" onClick={open}>
         Get in Touch

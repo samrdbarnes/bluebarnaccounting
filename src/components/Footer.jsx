@@ -8,8 +8,8 @@ export default function Footer() {
         <div>
           <Brand />
           <p className="footer-blurb">
-            Accounting, bookkeeping, and fractional CFO advisory for businesses that want their numbers working as hard
-            as they do.
+            Accounting and bookkeeping for contractors, private medical practices, and astronautics teams. Peace of
+            mind is the highest form of wealth.
           </p>
         </div>
 

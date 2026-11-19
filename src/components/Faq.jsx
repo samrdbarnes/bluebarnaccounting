@@ -16,7 +16,7 @@ function FaqItem({ id, question, answer, isOpen, onToggle }) {
           onClick={onToggle}
         >
           {question}
-          <Icon name="chevron" />
+          <Icon name="expand_more" />
         </button>
       </h3>
       <div className="faq-a" id={`${id}-panel`} role="region" aria-labelledby={`${id}-button`}>

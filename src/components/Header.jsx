@@ -4,6 +4,7 @@ import { useDrawer } from '../context/DrawerContext.jsx'
 import Brand from './Brand.jsx'
 import Button from './Button.jsx'
 import Icon from './Icon.jsx'
+import StarMark from './StarMark.jsx'
 
 export default function Header() {
   const { open } = useDrawer()
@@ -38,9 +39,12 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Button href="#contact" className="nav-cta" onClick={open}>
-          Get in Touch
-        </Button>
+        <div className="nav-cta-group">
+          <Button href="#contact" className="nav-cta" onClick={open}>
+            Get in Touch
+          </Button>
+          <StarMark className="nav-star" />
+        </div>
 
         <button
           type="button"

@@ -4,7 +4,8 @@ header.site-header {
   z-index: 100;
   background: rgba(36, 58, 71, 0.94);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 4px solid var(--copper);
+  border-image: linear-gradient(90deg, var(--copper), var(--cream)) 1;
 }
 
 .nav {
@@ -18,7 +19,7 @@ header.site-header {
 
 /* ---------- brand (logo lockup) ---------- */
 .brand { display: inline-flex; align-items: center; }
-.brand-logo { height: 44px; width: auto; max-width: none; }
+.brand-logo { height: 30px; width: auto; max-width: none; }
 
 /* ---------- primary navigation ---------- */
 .primary-nav { display: none; }
@@ -43,7 +44,7 @@ header.site-header {
 
 .nav-links a:hover { color: var(--ivory); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 
-.nav-cta { display: none; }
+.nav-cta-group { display: none; }
 
 .nav-burger {
   display: flex;
@@ -58,11 +59,13 @@ header.site-header {
   cursor: pointer;
 }
 
-.nav-burger svg { width: 24px; height: 24px; }
+.nav-burger svg { width: 24px; height: 24px; fill: currentColor; }
 
 @media (min-width: 900px) {
   .primary-nav { display: block; }
+  .nav-cta-group { display: flex; align-items: flex-end; gap: 6px; }
   .nav-cta { display: inline-flex; height: 40px; padding: 0 22px; }
+  .nav-star { width: 22px; height: 24px; flex-shrink: 0; }
   .nav-burger { display: none; }
 }
 
@@ -83,7 +86,8 @@ header.site-header {
   font-style: italic;
   font-size: calc(var(--body-min) + 1pt);
   color: var(--fg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 4px solid var(--copper);
+  border-image: linear-gradient(90deg, var(--copper), var(--cream)) 1;
 }
 
 .mobile-menu li a:hover { color: var(--action); }

@@ -4,7 +4,7 @@ import logo from '../assets/tabulae-logo.svg'
 export default function Brand() {
   return (
     <a href="#" className="brand" aria-label={`${site.name}, home`}>
-      <img className="brand-logo" src={logo} alt="" width="139" height="44" />
+      <img className="brand-logo" src={logo} alt="" width="120" height="30" />
     </a>
   )
 }
